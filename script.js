@@ -1,18 +1,20 @@
-function isDesktop() {
-  return window.matchMedia("(min-width: 768px)").matches;
-}
+        // Check if the device is a desktop
+        function isDesktop() {
+          return window.matchMedia("(min-width: 768px)").matches;
+      }
+      
+      // Redirect to a desktop-only message if not on a desktop
+      function redirectIfNotDesktop() {
+          if (!isDesktop()) {
+              window.location.href = "desktop-only.html";
+          }
+      }
+      
+      // Check on page load
+      window.onload = function() {
+          redirectIfNotDesktop();
+      };
 
-// Redirect to a desktop-only message if not on a desktop
-function redirectIfNotDesktop() {
-  if (!isDesktop()) {
-      window.location.href = "desktop-only.html";
-  }
-}
-
-// Check on page load
-window.onload = function() {
-  redirectIfNotDesktop();
-};
 
 document.querySelectorAll('#main').forEach((section, index) => {
   gsap.to(section, {
