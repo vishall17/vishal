@@ -275,7 +275,7 @@ a{
     border-radius: 50%;
     background: linear-gradient(to top right, #10a5af, #1bd6cf);
     /* background: linear-gradient(to top right,red,blue); */
-    top: 28%;
+    top: 21%;
     left: 62%;
     filter: blur(50px);
     animation-name: gooey;
