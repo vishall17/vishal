@@ -186,8 +186,10 @@ a{
     }
 }
 #main {
-    position: absolute;
+    position: relative;
     background-color: #151515;
+    z-index: 10;
+    margin-bottom: 100vh;
 }
 
 #page1{
@@ -600,4 +602,29 @@ a{
 
 .elem1:hover .elex-2 h5 i {
     opacity: 1;
+}
+
+#footer {
+    position: sticky;
+    height: 105vh;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    z-index: 8;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+}
+
+#footer h1 {
+    font-size: 18vw;
+}
+
+#footer-bottom {
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
 }
